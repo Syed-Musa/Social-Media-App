@@ -10,8 +10,8 @@ import postRoutes from "./routes/posts.js";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000;
-const clientOrigin = process.env.CLIENT_ORIGIN || "http://localhost:5173";
+const port = process.env.PORT;
+const clientOrigin = process.env.CLIENT_ORIGIN;
 
 app.use(cors({ origin: clientOrigin, credentials: true }));
 app.use(express.json({ limit: "2mb" }));
